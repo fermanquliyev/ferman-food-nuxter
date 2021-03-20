@@ -283,7 +283,8 @@ table th {
 // restaurant info
 
 section.restaurantinfo {
-  padding: 20px 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   .items {
     height: 250px;
@@ -323,4 +324,12 @@ section.restaurantinfo {
     text-align: center;
     line-height: 2;
   }
+}
+
+section.image {
+  height: 400px;
+}
+
+fieldset {
+  padding: 5px 12px;
 }

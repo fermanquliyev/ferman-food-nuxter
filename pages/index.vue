@@ -1,7 +1,9 @@
 <template>
   <main>
     <app-header></app-header>
-    <app-restaurant-info></app-restaurant-info>
+    <div class="container">
+    <app-restaurant-info :foodData="$store.getters.foodData"></app-restaurant-info>
+    </div>
   </main>
 </template>
 

@@ -1,20 +1,27 @@
 import { GetterTree, ActionTree, MutationTree } from "vuex";
+const uuid = require("uuid");
 
 export const state = () => ({
   things: [] as string[],
   name: "Me",
-  foodData: [] as any[]
+  foodData: [] as any[],
+  cart: [] as any[]
 });
 
 export type RootState = ReturnType<typeof state>;
 
 export const getters: GetterTree<RootState, RootState> = {
   name: state => state.name,
-  foodData: state => state.foodData
+  foodData: state => state.foodData,
+  cart: state => state.cart
 };
 
 export const mutations: MutationTree<RootState> = {
-  updateFoodData: (state, data: any[]) => (state.foodData = data)
+  updateFoodData: (state, data: any[]) => (state.foodData = data),
+  addToCart: (state, data: any) => {
+    data.id = uuid.v4();
+    state.cart.push(data);
+  }
 };
 
 export const actions: ActionTree<RootState, RootState> = {

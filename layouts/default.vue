@@ -1,8 +1,24 @@
 <template>
   <div>
-    <Nuxt />
+    <div class="content">
+      <app-menu></app-menu>
+      <Nuxt />
+    </div>
+    <footer>
+      <p>All rights reserved. Created by Ferman Quliyev</p>
+    </footer>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import AppMenu from "@/components/AppMenu.vue";
+export default Vue.extend({
+  components: {
+    AppMenu
+  }
+});
+</script>
 
 <style>
 html {

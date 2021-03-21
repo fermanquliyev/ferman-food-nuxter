@@ -55,7 +55,7 @@ export default {
     manifest: {
       lang: 'en',
       name: "FoodNuxter",
-      short_name: "",
+      short_name: "FoodNuxter",
       icons: [
         { src: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
         { src: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }

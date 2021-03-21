@@ -6,7 +6,9 @@
       header="FoodNuxter"
       lead="Order your food and start eating in 5 minutes!"
     >
-      <b-button variant="danger" href="#">More Info</b-button>
+
+        <nuxt-link to="/restaurants" class="btn btn-danger">More Info</nuxt-link>
+
       <slot></slot>
     </b-jumbotron>
   </section>

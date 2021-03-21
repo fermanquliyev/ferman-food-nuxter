@@ -87,19 +87,20 @@ export default Vue.extend({
   },
   methods: {
     addToCart() {
-      if (!this.selectedOption || !this.selectedAddons.length) {
+      if ((this.currentItem.options && !this.selectedOption) || !this.selectedAddons.length) {
         this.alertVariant = "danger";
         this.alertMessage =
-          "Please select addon and option. Minimum valid count is 1";
+          `Please select addon${this.currentItem.options?' and option':''}.`;
         this.submitted = true;
         return;
       }
       let cartData = {
         option: this.selectedOption,
-        addon: this.selectedAddons,
+        addons: this.selectedAddons,
         itemId: this.id,
+        itemName: this.currentItem.item,
         count: this.count,
-        combinedPrice: this.combinedPrice
+        combinedPrice: this.currentItem.price * this.count
       };
       this.$store.commit("addToCart", cartData);
       this.alertVariant = "success";
@@ -107,7 +108,7 @@ export default Vue.extend({
       this.submitted = true;
       setTimeout(() => {
         this.$router.push('/restaurants');
-      }, 2000);
+      }, 1000);
     }
   },
   computed: {

@@ -13,7 +13,8 @@ export type RootState = ReturnType<typeof state>;
 export const getters: GetterTree<RootState, RootState> = {
   name: state => state.name,
   foodData: state => state.foodData,
-  cart: state => state.cart
+  cart: state => state.cart,
+  cartCount: state=>state.cart.reduce((a,b)=>a+b.count,0)
 };
 
 export const mutations: MutationTree<RootState> = {

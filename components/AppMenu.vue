@@ -18,7 +18,7 @@
       <b-navbar-nav class="ml-auto">
 
         <li class="nav-item">
-          <nuxt-link to="/cart" class="nav-link">Cart ({{$store.getters.cart.length}})</nuxt-link>
+          <nuxt-link to="/cart" class="nav-link">Cart ({{$store.getters.cartCount}})</nuxt-link>
         </li>
         <!-- <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>

@@ -3,7 +3,7 @@
     <b-jumbotron
       fluid
       text-variant="white"
-      header="FoodNuxter"
+      header="Food Nuxter"
       lead="Order your food and start eating in 5 minutes!"
     >
 

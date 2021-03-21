@@ -8,9 +8,9 @@
         <span>Free delivery</span>
       </p>
 
-      <div class="row my-4">
+      <div class="row mt-4 mb-2">
         <div
-          class="col-lg-4 col-md-6"
+          class="col-lg-4 col-md-6 mb-2"
           v-for="menuItem in store.menu"
           :key="menuItem.id"
         >

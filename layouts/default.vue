@@ -5,7 +5,7 @@
       <Nuxt />
     </div>
     <footer>
-      <p>All rights reserved. Created by Ferman Quliyev</p>
+      <p>Created by Ferman Quliyev</p>
     </footer>
   </div>
 </template>
